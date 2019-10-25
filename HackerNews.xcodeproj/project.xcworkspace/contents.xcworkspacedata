@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:HackerNewsCollectionView.xcodeproj">
+      location = "self:/Users/jpricke1/Documents/workspace/personal/HackerNews-iOS/HackerNews.xcodeproj">
    </FileRef>
 </Workspace>
