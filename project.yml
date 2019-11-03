@@ -1,5 +1,8 @@
 name: HackerNews
 options:
+  usesTabs: false
+  indentWidth: 4
+  tabWidth: 4
   bundleIdPrefix: com.ford.HackerNews
 targets:
   HackerNews:
@@ -9,6 +12,7 @@ targets:
     sources: [HackerNews]
     dependencies:
       - carthage: Alamofire
+      - carthage: SnapKit
   HackerNewsTests:
     type: bundle.unit-test
     platform: iOS

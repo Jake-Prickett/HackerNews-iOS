@@ -9,14 +9,27 @@
 import UIKit
 
 class HNStoryCell: UICollectionViewCell {
+
     static let reuseID = "HNStoryCell"
 
-    lazy var textLabel: UILabel = UILabel()
+    lazy var titleLabel: UILabel = {
+        let label = UILabel()
+        label.numberOfLines = 0
+        label.textAlignment = .center
+        return label
+    }()
+
+    lazy var subTitleLabel: UILabel = {
+        let label = UILabel()
+        label.numberOfLines = 0
+        label.textAlignment = .center
+        return label
+    }()
 
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.contentView.backgroundColor = .lightGray
-        self.textLabel.textAlignment = .center
+
         layout()
     }
 
@@ -35,15 +48,21 @@ class HNStoryCell: UICollectionViewCell {
     override func prepareForReuse() {
         super.prepareForReuse()
 
-        self.textLabel.text = nil
+        titleLabel.text = nil
+        subTitleLabel.text = nil
     }
 
     private func layout() {
-        contentView.addSubview(textLabel)
-
-        textLabel.snp.makeConstraints { make in
+        contentView.addSubview(titleLabel)
+        titleLabel.snp.makeConstraints { make in
             make.top.left.equalTo(10)
             make.right.equalTo(-10)
+        }
+
+        contentView.addSubview(subTitleLabel)
+        subTitleLabel.snp.makeConstraints { make in
+            make.left.equalTo(10)
+            make.bottom.right.equalTo(-10)
         }
     }
 }

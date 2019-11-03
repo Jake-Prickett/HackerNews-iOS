@@ -44,6 +44,8 @@ class HNLandingViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        title = "Hacker News"
+
         collectionView = UICollectionView(
             frame: .zero,
             collectionViewLayout: layoutForCollectionView
@@ -93,10 +95,10 @@ extension HNLandingViewController: UICollectionViewDataSource {
                                                                 return UICollectionViewCell()
         }
 
-        cell.textLabel.text = story.title
-        cell.textLabel.numberOfLines = 0
+        cell.titleLabel.text = story.title
+        cell.titleLabel.numberOfLines = 0
 
-//        cell.detailTextLabel?.text = "\(story.numberOfPoints) points (\(story.urlString))"
+        cell.subTitleLabel.text = "\(story.numberOfPoints)\n(\(story.urlString))"
         return cell
     }
 
