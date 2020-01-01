@@ -1,2 +1,3 @@
-github "Alamofire/Alamofire" "4.8.2"
+github "Alamofire/Alamofire" "4.9.1"
+github "Jake-Prickett/plop-ios" "1.0.2"
 github "SnapKit/SnapKit" "4.2.0"

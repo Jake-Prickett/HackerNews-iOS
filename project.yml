@@ -13,6 +13,7 @@ targets:
     dependencies:
       - carthage: Alamofire
       - carthage: SnapKit
+      - carthage: PLOP
   HackerNewsTests:
     type: bundle.unit-test
     platform: iOS

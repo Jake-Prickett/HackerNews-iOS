@@ -13,6 +13,7 @@ public struct HackerRankStory: Decodable {
     var score: Int
     var url: String?
     var title: String
+    var by: String
 }
 
 extension HackerRankStory {
