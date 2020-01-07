@@ -9,6 +9,12 @@ pipeline {
             }
         }
 
+        stage('Shrek') {
+            steps {
+                sh 'xcodegen'
+            }
+        }
+
         stage('Test') {
             steps {
                 sh "fastlane tests"
