@@ -1,4 +1,7 @@
 pipeline {
+    
+    agent any
+
     stage('Install Dev Dependencies') {
         steps {
             sh "brew install xcodegen"
