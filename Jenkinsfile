@@ -11,7 +11,7 @@ pipeline {
 
         stage('Test') {
             steps {
-                sh "bundle exec fastlane tests"
+                sh "fastlane tests"
             }
         }
     }
