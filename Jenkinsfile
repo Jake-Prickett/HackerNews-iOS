@@ -1,22 +1,18 @@
 pipeline {
 
-    
     agent any
 
-stages {
-    stage('Install Dev Dependencies') {
-        steps {
-            sh "brew install xcodegen"
-            sh "brew install carthage"
-            sh "brew install fastlane"
-            sh "carthage update --iOS"
+    stages {
+        stage('Install Dev Dependencies') {
+            steps {
+                sh "carthage update --platform iOS"
+            }
         }
-    }
 
-    stage('Test') {
-        steps {
-            sh "bundle exec fastlane tests"
+        stage('Test') {
+            steps {
+                sh "bundle exec fastlane tests"
+            }
         }
     }
-}
 }
