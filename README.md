@@ -1,3 +1,3 @@
 # HackerNews-iOS
 Knock-off HackerNews iOS Application
-good words
+good words, great words
